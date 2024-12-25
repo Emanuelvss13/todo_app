@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :todos do
-    resources :tasks, except: [:index, :show]
+    resources :tasks, except: [:new, :edit]
   end
 
   root "todos#index"
