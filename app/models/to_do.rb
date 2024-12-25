@@ -1,7 +1,9 @@
 class ToDo < ApplicationRecord
   has_many :tasks, dependent: :destroy
 
-  validates :title, :status, inclusion: { in: ['pending', 'completed', 'in_progress'] }, presence: true
+  validates :title, presence: true
+
+  validates :status, inclusion: { in: ['pending', 'completed', 'in_progress'] }
 
   after_initialize :set_default_status, if: :new_record?
 

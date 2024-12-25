@@ -7,10 +7,5 @@ Rails.application.routes.draw do
 
   end
 
-  root "todos#index"
-  
-  # get "home/index"
-  
-  # # Defines the root path route ("/")
-  # root "home#index"
+  root "home#index"
 end
