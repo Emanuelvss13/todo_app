@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  get "home/index"
+
+  resources :todos do
+    resources :tasks, except: [:index, :show]
+  end
+
+  root "todos#index"
   
-  # Defines the root path route ("/")
-  root "home#index"
+  # get "home/index"
+  
+  # # Defines the root path route ("/")
+  # root "home#index"
 end
