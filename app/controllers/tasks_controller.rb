@@ -1,10 +1,12 @@
 class TasksController < ApplicationController
   before_action :set_todo
-  before_action :set_task, only: [:show, :update, :destroy, :mark_as_complete]
-  skip_before_action :verify_authenticity_token, only: [:create, :mark_as_complete]
+  before_action :set_task, only: [:show, :update, :destroy, :toggle_completed]
+  skip_before_action :verify_authenticity_token, only: [:create, :toggle_completed, :destroy]
 
-  def mark_as_complete
-    if @task.update(completed: true)
+  def toggle_completed
+    @task = @task.update(completed: !@task.completed)
+    @todo.update(status: 'in_progress')
+    if @task
       render json: @task, status: :ok
     else
       render json: @task.errors, status: :unprocessable_entity
