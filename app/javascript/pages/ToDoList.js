@@ -24,7 +24,7 @@ function TodoListApp() {
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
 
-  const fetchToDos = () => {
+  const fetchToDos = () => {  
     api.get('/todos')
       .then((response) => {
         setTodos(response.data);
@@ -48,6 +48,16 @@ function TodoListApp() {
       })
       .catch((error) => {
         console.error('Erro ao apagar To-Do:', error);
+      });
+  };
+
+  const handleToggleCompleted = (id) => {
+    api.patch(`/todos/${id}/mark_as_completed`)
+      .then(() => {
+        fetchToDos();
+      })
+      .catch((error) => {
+        console.error('Erro ao marcar To-Do como completo:', error);
       });
   };
 
@@ -112,10 +122,10 @@ function TodoListApp() {
             <ListItemIcon>
               <Checkbox
                 edge="start"
-                checked={todo.completed}
+                checked={todo.status === 'completed'}
                 tabIndex={-1}
                 disableRipple
-                onClick={() => handleToggle(todo.id)}
+                onClick={() => handleToggleCompleted(todo.id)}
               />
             </ListItemIcon>
 
