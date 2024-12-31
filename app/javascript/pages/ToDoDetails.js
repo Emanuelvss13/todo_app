@@ -15,7 +15,7 @@ import {
   darken,
 } from '@mui/material';
 import { Delete } from '@mui/icons-material';
-import api from './api';
+import api from '../util/api';
 
 function ToDoListDetails() {
   const { id } = useParams();
