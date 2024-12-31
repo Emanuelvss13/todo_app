@@ -10,13 +10,18 @@ Fazer um TO DO List, onde este, tem que ter no mínimo:
 Qualquer funcionalidade a mais que isso é bem vinda e vai ajudar a gente no entendimento do seu conhecimento, você deverá desenvolvê-la utilizando Ruby on Rails, sendo essa nossa stack principal.
 Além disso a aplicação deverá conter Front e Back-end, de forma que a gente também consiga avaliar seu conhecimento em banco de dados.
 
+## Link da Api: http://147.182.194.163:5000/
+
 ## Instruções:
  
 ```bash
 # clone o Repositório ou faça download do código fonte logo abaixo.
 $ git clone https://github.com/Emanuelvss13/todo_app.git
 
-# instale as dependências.
+# instale as dependências do raisl.
+$ bundle install
+
+# instale as dependências do react.
 $ npm i
 
 # Rode um bando de dados da aplicação com o docker (opcional).
@@ -25,7 +30,7 @@ $ docker compose up --build
 # Rode as migrations diponíveis:
 $ bin/rails db:migrate
 
-# Rode a aplicação utilizando:
+# Rode a aplicação localmente utilizando:
 $ bin/dev
 
 # Acesse a rotas disponiveis importando o arquivo requests.json em seu insomnia.
