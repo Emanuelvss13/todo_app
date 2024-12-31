@@ -10,7 +10,9 @@ Fazer um TO DO List, onde este, tem que ter no mínimo:
 Qualquer funcionalidade a mais que isso é bem vinda e vai ajudar a gente no entendimento do seu conhecimento, você deverá desenvolvê-la utilizando Ruby on Rails, sendo essa nossa stack principal.
 Além disso a aplicação deverá conter Front e Back-end, de forma que a gente também consiga avaliar seu conhecimento em banco de dados.
 
-## Link da Api: http://147.182.194.163:5000/
+### Github projet: https://github.com/users/Emanuelvss13/projects/2/views/1
+
+### Link da aplicação: http://147.182.194.163:5000/
 
 ## Instruções:
  
