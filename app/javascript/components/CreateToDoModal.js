@@ -11,6 +11,7 @@ import {
   MenuItem
 } from '@mui/material';
 import axios from 'axios';
+import api from '../util/api';
 
 const modalStyle = {
   position: 'absolute',
@@ -26,14 +27,11 @@ const modalStyle = {
 
 function CreateToDoModal({ open, handleClose, fetchToDos }) {
   const [title, setTitle] = useState('');
-  const [status, setStatus] = useState('pending');  // Valor padrão
 
-  // Função para criar um novo To-Do
   const handleCreateToDo = () => {
     if (title.trim()) {
-      axios.post('http://localhost:3000/todos', {
+      api.post('/todos', {
         title,
-        status,
       })
       .then(() => {
         fetchToDos();
