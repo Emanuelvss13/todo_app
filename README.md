@@ -1,24 +1,32 @@
-# README
+<p align="center">
+  <a href="https://rubyonrails.org/" target="blank"><img src="https://logowik.com/content/uploads/images/rails5177.logowik.com.webp" width="200" alt="Nest Logo" /></a>
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Descrição do Desafio:
+Fazer um TO DO List, onde este, tem que ter no mínimo:
+ - 1) Poder criar várias listas de TO DO;
+ - 2) Cada lista tem que poder ser adicionado vários itens.
 
-Things you may want to cover:
+Qualquer funcionalidade a mais que isso é bem vinda e vai ajudar a gente no entendimento do seu conhecimento, você deverá desenvolvê-la utilizando Ruby on Rails, sendo essa nossa stack principal.
+Além disso a aplicação deverá conter Front e Back-end, de forma que a gente também consiga avaliar seu conhecimento em banco de dados.
 
-* Ruby version
+## Instruções:
+ 
+```bash
+# clone o Repositório ou faça download do código fonte logo abaixo.
+$ git clone https://github.com/Emanuelvss13/todo_app.git
 
-* System dependencies
+# instale as dependências.
+$ npm i
 
-* Configuration
+# Rode um bando de dados da aplicação com o docker (opcional).
+$ docker compose up --build
 
-* Database creation
+# Rode as migrations diponíveis:
+$ bin/rails db:migrate
 
-* Database initialization
+# Rode a aplicação utilizando:
+$ bin/dev
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Acesse a rotas disponiveis importando o arquivo requests.json em seu insomnia.
+```
