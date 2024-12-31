@@ -114,9 +114,8 @@ function TodoListApp() {
               },
               transition: '0.1s',
               borderRadius: '5px',
-              cursor: 'pointer',
+            cursor: 'pointer',
             }}
-            onClick={() => handleViewToDo(todo.id)}
           >
 
             <ListItemIcon>
@@ -132,6 +131,7 @@ function TodoListApp() {
             <ListItemText
               primary={todo.title}
               sx={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+              onClick={() => handleViewToDo(todo.id)}
             />
 
             <ListItemText
