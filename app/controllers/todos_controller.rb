@@ -4,7 +4,7 @@ class TodosController < ApplicationController
 
   # GET /todos
   def index
-    @todos = ToDo.includes(:tasks).all
+    @todos = ToDo.includes(:tasks).order(created_at: :desc).all
     render json: @todos, include: :tasks
   end
 
